@@ -1,0 +1,254 @@
+/* ===== RESET ===== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --bg:#0f172a;
+    --sidebar:#111827;
+    --card:#1e293b;
+    --hover:#334155;
+    --accent:#22c55e;
+    --text:#f8fafc;
+    --danger:#ef4444;
+    --warning:#f59e0b;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    display:flex;
+    min-height:100vh;
+}
+
+/* ===== SIDEBAR ===== */
+
+.sidebar{
+    width:270px;
+    background:var(--sidebar);
+    padding:25px;
+    border-right:1px solid #1f2937;
+}
+
+.logo-section{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.logo{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:10px;
+}
+
+.logo-section h2{
+    font-size:22px;
+    color:var(--accent);
+}
+
+.sidebar button{
+    width:100%;
+    border:none;
+    outline:none;
+    cursor:pointer;
+    padding:14px;
+    margin-bottom:10px;
+    border-radius:10px;
+    background:var(--card);
+    color:white;
+    text-align:left;
+    transition:.3s;
+    font-size:15px;
+}
+
+.sidebar button i{
+    margin-right:10px;
+}
+
+.sidebar button:hover{
+    background:var(--hover);
+    transform:translateX(5px);
+}
+
+/* ===== CONTENT ===== */
+
+.content{
+    flex:1;
+    padding:40px;
+}
+
+.section h1{
+    margin-bottom:20px;
+    color:var(--accent);
+}
+
+.hidden{
+    display:none;
+}
+
+/* ===== DASHBOARD ===== */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:var(--card);
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 0 15px rgba(0,0,0,.3);
+}
+
+.card h3{
+    margin-bottom:10px;
+    color:#94a3b8;
+}
+
+.card p{
+    font-size:32px;
+    font-weight:bold;
+    color:var(--accent);
+}
+
+/* ===== FORM ===== */
+
+input,
+textarea{
+    width:100%;
+    padding:14px;
+    border:none;
+    outline:none;
+    border-radius:10px;
+    margin-top:10px;
+    margin-bottom:15px;
+    background:#0f172a;
+    color:white;
+    border:1px solid #334155;
+}
+
+textarea{
+    resize:none;
+}
+
+label{
+    display:block;
+    margin-top:10px;
+}
+
+/* ===== BUTTON ===== */
+
+button{
+    border:none;
+    cursor:pointer;
+    padding:12px 20px;
+    border-radius:10px;
+    background:var(--accent);
+    color:white;
+    font-weight:600;
+    transition:.3s;
+}
+
+button:hover{
+    opacity:.9;
+    transform:translateY(-2px);
+}
+
+/* ===== PASSWORD BAR ===== */
+
+.progress{
+    width:100%;
+    height:18px;
+    background:#334155;
+    border-radius:20px;
+    overflow:hidden;
+    margin-top:15px;
+}
+
+#bar{
+    width:0%;
+    height:100%;
+    transition:.4s ease;
+}
+
+/* ===== STRENGTH TEXT ===== */
+
+#strengthText{
+    margin-top:15px;
+    margin-bottom:15px;
+}
+
+/* ===== RECOMMENDATION LIST ===== */
+
+#recommendations{
+    padding-left:20px;
+}
+
+#recommendations li{
+    margin-bottom:8px;
+}
+
+/* ===== TIPS ===== */
+
+.tips-list{
+    background:var(--card);
+    padding:20px;
+    border-radius:15px;
+}
+
+.tips-list li{
+    margin-bottom:12px;
+    line-height:1.6;
+}
+
+/* ===== HASH RESULT ===== */
+
+#hashResult{
+    font-size:13px;
+    font-family:monospace;
+}
+
+/* ===== SCROLLBAR ===== */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+    background:#0f172a;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#334155;
+    border-radius:10px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width:900px){
+
+    body{
+        flex-direction:column;
+    }
+
+    .sidebar{
+        width:100%;
+        border-right:none;
+        border-bottom:1px solid #1f2937;
+    }
+
+    .content{
+        padding:20px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+}

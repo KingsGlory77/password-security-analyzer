@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Security Toolkit</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div class="sidebar">
+
+    <div class="logo-section">
+        <h2>Cyber Toolkit</h2>
+    </div>
+
+    <button onclick="showSection('dashboard')">
+        <i class="fas fa-chart-line"></i>
+        Dashboard
+    </button>
+
+    <button onclick="showSection('analyzer')">
+        <i class="fas fa-lock"></i>
+        Password Analyzer
+    </button>
+
+    <button onclick="showSection('generator')">
+        <i class="fas fa-key"></i>
+        Password Generator
+    </button>
+
+    <button onclick="showSection('entropy')">
+        <i class="fas fa-brain"></i>
+        Entropy Calculator
+    </button>
+
+    <button onclick="showSection('hash')">
+        <i class="fas fa-fingerprint"></i>
+        SHA-256 Generator
+    </button>
+
+    <button onclick="showSection('tips')">
+        <i class="fas fa-shield-alt"></i>
+        Security Tips
+    </button>
+
+</div>
+
+<div class="content">
+
+    <!-- DASHBOARD -->
+
+    <section id="dashboard" class="section">
+
+        <h1>Cyber Security Dashboard</h1>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Total Analysis</h3>
+                <p id="totalAnalysis">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Strong Passwords</h3>
+                <p id="strongPasswords">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Weak Passwords</h3>
+                <p id="weakPasswords">0</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ANALYZER -->
+
+    <section id="analyzer" class="section hidden">
+
+        <h1>Password Strength Analyzer</h1>
+
+        <input
+            type="password"
+            id="password"
+            placeholder="Enter your password">
+
+        <div class="progress">
+            <div id="bar"></div>
+        </div>
+
+        <h3 id="strengthText">
+            Password Strength
+        </h3>
+
+        <ul id="recommendations"></ul>
+
+    </section>
+
+    <!-- GENERATOR -->
+
+    <section id="generator" class="section hidden">
+
+        <h1>Password Generator</h1>
+
+        <label>Password Length</label>
+
+        <input
+            type="number"
+            id="length"
+            value="16"
+            min="8"
+            max="64">
+
+        <button onclick="generatePassword()">
+            Generate Password
+        </button>
+
+        <textarea
+            id="generatedPassword"
+            rows="4"
+            readonly>
+        </textarea>
+
+    </section>
+
+    <!-- ENTROPY -->
+
+    <section id="entropy" class="section hidden">
+
+        <h1>Password Entropy Calculator</h1>
+
+        <input
+            type="text"
+            id="entropyInput"
+            placeholder="Enter password">
+
+        <button onclick="calculateEntropy()">
+            Calculate
+        </button>
+
+        <p id="entropyResult"></p>
+
+    </section>
+
+    <!-- HASH -->
+
+    <section id="hash" class="section hidden">
+
+        <h1>SHA-256 Generator</h1>
+
+        <input
+            type="text"
+            id="hashInput"
+            placeholder="Enter text">
+
+        <button onclick="generateHash()">
+            Generate Hash
+        </button>
+
+        <textarea
+            id="hashResult"
+            rows="6"
+            readonly>
+        </textarea>
+
+    </section>
+
+    <!-- TIPS -->
+
+    <section id="tips" class="section hidden">
+
+        <h1>Security Tips</h1>
+
+        <ul class="tips-list">
+            <li>Use at least 12 characters.</li>
+            <li>Use uppercase and lowercase letters.</li>
+            <li>Use numbers and symbols.</li>
+            <li>Never reuse passwords.</li>
+            <li>Enable Multi-Factor Authentication.</li>
+            <li>Use a password manager.</li>
+        </ul>
+
+    </section>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
