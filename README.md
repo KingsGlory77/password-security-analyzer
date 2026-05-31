@@ -28,7 +28,7 @@ A web-based cybersecurity toolkit focused on password security.
 - Export Report
 - Dark/Light Theme
 
-<img width="2547" height="1419" alt="image" src="https://github.com/user-attachments/assets/9fb8d7af-c119-4e76-9d94-0ce2e035f512" />
+<img width="2535" height="1408" alt="image" src="https://github.com/user-attachments/assets/ffdf1450-ba89-48c0-b03d-5a7d1c13936d" />
 <img width="2538" height="1411" alt="image" src="https://github.com/user-attachments/assets/7a417dee-42c4-4a20-92a0-b3c01fa46eff" />
 <img width="2539" height="1407" alt="image" src="https://github.com/user-attachments/assets/1c78861f-ca76-457f-ad87-83dcddd82d4d" />
 <img width="2525" height="1403" alt="image" src="https://github.com/user-attachments/assets/8166eaca-c333-45ba-b5ea-bcc9ea8212b9" />
